@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 require_relative('./corrector')
 
+# Implement Person class
 class Person
   attr_accessor :name, :age
   attr_reader :id
