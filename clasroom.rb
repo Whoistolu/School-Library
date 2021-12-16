@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_releative './student'
 
 class Classroom
