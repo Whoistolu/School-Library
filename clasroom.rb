@@ -2,6 +2,7 @@
 
 require_releative './student'
 
+# Implement Classroom class
 class Classroom
   attr_accessor :label, :students
 
