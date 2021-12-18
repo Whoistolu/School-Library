@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Implement Corrector class
 class Corrector
   def correct_name(name)
