@@ -8,6 +8,7 @@ require_relative './book'
 require_relative './teacher'
 require_relative './clasroom'
 
+# Initialize the App class
 class App
   def initialize
     @books = []
@@ -135,22 +136,16 @@ class App
   def create_rental
     puts 'Select a book from the following list by number'
     @books.each_with_index { |book, i| puts "#{i}) #{book}" }
-
     book_i = gets.chomp.to_i
-
     puts
     puts 'Select a person from the following list by number (not ID)'
     @people.each_with_index { |person, i| puts "#{i}) #{person}" }
-
     person_i = gets.chomp.to_i
-
     puts
     print 'Date: '
     date = gets.chomp
-
     rental = Rental.new(date, @books[book_i], @people[person_i])
     @rentals.push(rental)
-
     puts 'Rental created successfully'
   end
 
