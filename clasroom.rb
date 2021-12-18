@@ -1,4 +1,6 @@
-require_releative './student'
+# frozen_string_literal: true
+
+require_relative './student'
 
 # Implement Classroom class
 class Classroom

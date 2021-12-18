@@ -1,15 +1,20 @@
+# frozen_string_literal: true
+
 # Implement Book class
 class Book
   attr_accessor :title, :author, :rentals
 
-  def intialize(title, author)
+  def initialize(title, author)
     @title = title
     @author = author
     @rentals = []
   end
 
-  def add_rental(rental)
-    @rentals.push(rental) unless @rentals.include?(rental)
-    rental.book = self
+  def add_rental(book)
+    @rentals.push(book)
+  end
+
+  def to_s
+    "Title: \"#{@title}\", Author: #{author}"
   end
 end

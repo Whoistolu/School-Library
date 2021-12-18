@@ -1,20 +1,21 @@
+# frozen_string_literal: true
+
 # Implement Rental class
 class Rental
-  attr_accessor :date
+  attr_accessor :date, :book, :person
 
-  def initialize(book, person, date = DateTime.now())
+  def initialize(date, book, person)
     @date = date
-    self.book = book
-    self.person = person
-  end
 
-  def book=(book)
     @book = book
-    @book.rentals.push(self) unless @book.rentals.include?(self)
+    book.rentals << self
+
+    @person = person
+    person.rentals << self
   end
 
-  def person=(person)
-    @person = person
-    @person.rentals.push(self) unless @person.rentals.include?(self)
+  def to_s
+    # puts "Debug ==> Date: #{@date}, Book: \"#{book}\" by #{book}"
+    "Date: #{@date}, Book: \"#{book.title}\" by #{@book.author}"
   end
 end
