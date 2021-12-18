@@ -1,6 +1,9 @@
 # School Library
 
 > A Ruby School Library Application that allows you to add students, teachers and books. Save records of who borrowed a given book.
+
+## Project Image
+![Project Image](./img/img.png)
 ## Built With
 
 - Ruby

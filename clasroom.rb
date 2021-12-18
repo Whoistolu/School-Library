@@ -1,4 +1,4 @@
-require_releative './student'
+require_relative './student'
 
 # Implement Classroom class
 class Classroom
