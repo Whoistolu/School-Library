@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-# frozen_string_literal: true
 
 require_relative './person'
 require_relative './student'
@@ -137,7 +136,6 @@ class App
     puts 'Select a book from the following list by number'
     @books.each_with_index { |book, i| puts "#{i}) #{book}" }
     book_i = gets.chomp.to_i
-    
     puts
     puts 'Select a person from the following list by number (not ID)'
     @people.each_with_index { |person, i| puts "#{i}) #{person}" }
